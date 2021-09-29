@@ -12,6 +12,12 @@ git clone https://github.com/notmarshmllow/Dependency-Checker.git
 cd Dependency-Checker
 python3 dependency_checker.py -h
 ```
+
+# Configuration
+
+
+1. Open `cred.py` file and enter your GitHub account's email address and password in respective fields.
+
 # Scan files in single Repository
 ```
 python3 dependency_checker.py -u https://github.com/notmarshmllow/nonsense
