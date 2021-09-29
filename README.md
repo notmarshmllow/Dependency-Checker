@@ -1,7 +1,7 @@
 # Dependency-Checker
 A tool to find Dependency Confusions inside a repository or an entire organization on GitHub. Provide it name of organization via stdin or repository URL and it will run checks whether the dependencies used exist in public database or not.
 
-Note: The tool is still in development phase. It generates some false positives while scanning Python packages and NPM Registry. 
+Note: The tool is still in development phase. It can generate some false positives while scanning Python packages and NPM Registry. 
 
 ![alt image](https://github.com/notmarshmllow/Dependency-Checker/blob/main/image.jpg)
 
