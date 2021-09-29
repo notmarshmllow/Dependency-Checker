@@ -18,6 +18,9 @@ python3 dependency_checker.py -h
 
 1. Open `cred.py` file and enter your GitHub account's email address and password in respective fields.
 
+![alt image](https://github.com/notmarshmllow/Dependency-Checker/blob/main/image02.jpg
+)
+
 # Scan files in single Repository
 ```
 python3 dependency_checker.py -u https://github.com/notmarshmllow/nonsense
