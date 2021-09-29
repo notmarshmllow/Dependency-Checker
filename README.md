@@ -29,6 +29,7 @@ Note: `-u` scans only files in repository. If you want to scan files inside fold
 
 # Scan an entire Organization
 
+Note: Organization name should match the excat organization name on GitHub
 ```
 python3 dependency_checker.py -org google
 ```
