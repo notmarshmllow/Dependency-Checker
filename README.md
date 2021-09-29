@@ -42,7 +42,7 @@ python3 dependency_checker.py -org google -v
 
 # Scan Pages
 
-Limit the amount of pages to scan while scanning an entire organization.
+Limit the amount of pages to scan while scanning an entire organization. (Default: 100 Pages)
 
 ```
 python3 dependency_checker.py -org google -p 20
@@ -55,6 +55,6 @@ python3 dependency_checker.py -org google -v -o output.txt
 ```
 All developments to the tool are welcomed and highly appreciated. Please feel free to open an issue for bug fixes and new features.
 
-Made by [@notmarshmllow](https://github.com/notmarshmllow)
+Dependency Checker - Created by [@notmarshmllow](https://github.com/notmarshmllow)
 
 
