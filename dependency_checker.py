@@ -23,7 +23,7 @@ init()
 parser = argparse.ArgumentParser(description="Dependency Checker. Find misconfigured Dependencies. Coded by @notmarshmllow")
 parser.add_argument('-u', help='URL of Repository.', type=str, required=False)
 parser.add_argument('-org', help='Org Name.', type=str)
-parser.add_argument('-p', help='Page Number.', type=int, default='100')
+parser.add_argument('-p', help='Page Number.', type=int)
 parser.add_argument('-o', help='Wite output to a file.', type=str)
 parser.add_argument('-v', help='Verbose Mode.', action="count")
 parser.add_argument('-s', help='Silent Mode. No Output.', action="count")
@@ -51,6 +51,12 @@ def banner():
     ''')
 if not args.s:
     banner()
+
+if args.p:
+    page_to_scan = args.p
+else:
+    args.p = 100
+    args.p = (args.p)
 
 def scan_info():
     if args.org:
