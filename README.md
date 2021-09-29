@@ -1,9 +1,11 @@
 # Dependency-Checker
-A tool to find Dependency Confusions inside a repository or an entire organization on GitHub. Provide it name of organization via stdin or repository URL and it will run checks whether the dependencies used exist in public database or not. Dependency Checker checks for valid Python (Pypi), NPM and GoLang Packages. 
+A tool to find Dependency Confusions inside a repository or an entire organization on GitHub. Provide it name of organization or repository URL and it will run checks whether the dependencies used exist in public database or not. Dependency Checker checks for valid Python (Pypi), NPM and GoLang Packages. 
 
 `Note: The tool is still in development phase. It can generate some false positives while scanning Packages.`
 
 ![alt image](https://github.com/notmarshmllow/Dependency-Checker/blob/main/image.jpg)
+
+<hr>
 
 # Installation:
 
@@ -12,6 +14,7 @@ git clone https://github.com/notmarshmllow/Dependency-Checker.git
 cd Dependency-Checker
 python3 dependency_checker.py -h
 ```
+<hr>
 
 # Configuration
 
@@ -22,6 +25,10 @@ python3 dependency_checker.py -h
 'login': 'your-github-account@email.here',                      
 'password': 'your-github-account-password-here', 
 ```
+
+<hr>
+
+# Commands
 
 # Scan files in single Repository
 ```
@@ -42,7 +49,7 @@ python3 dependency_checker.py -org google
 python3 dependency_checker.py -org google -v
 ```
 
-# Scan Pages
+# Limit Pages to Scan
 
 Limit the amount of pages to scan while scanning an entire organization. (Default: 100 Pages)
 
@@ -55,6 +62,9 @@ python3 dependency_checker.py -org google -p 20
 ```
 python3 dependency_checker.py -org google -v -o output.txt
 ```
+
+<hr>
+
 All developments to the tool are welcomed and highly appreciated. Please feel free to open an issue for bug fixes and new features.
 
 Dependency Checker - Created by [@notmarshmllow](https://github.com/notmarshmllow)
