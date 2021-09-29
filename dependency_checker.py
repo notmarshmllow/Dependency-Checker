@@ -1,3 +1,8 @@
+#Dependency Checker v1
+#Tool to find dependency confusion issues in entire GitHub organization and individual repositories.
+#More info: https://github.com/notmarshmllow/Dependency-Checker
+#Coded by @notmarshmllow (https://notmarshmllow.github.io/blog)
+
 from __future__ import print_function
 from os import execl, replace
 import cred
