@@ -261,7 +261,7 @@ def pyt():
                                         if not args.s:  
                                             print(colored(f'[Python Package : {libs}] - ', 'red') + i)
                                             if args.o:
-                                                msg_py = ((f'[Python Package : {libs}] -> ') + i.replace('https://raw.githubusercontent.com/' , 'https://github.com/').replace('/main/', '/blob/main/'))
+                                                msg_py = ((f'[Python Package : {libs}] -> ') + i)
                                                 output_file.write(msg_py+'\n')                                    
                                     
 
@@ -308,9 +308,9 @@ def pyt():
                                 vuln_py_lib = requests.get('https://pypi.org/project/'+str(libs).replace(',', '').replace('__', '').replace(']', '').replace('[', ''))
                                 if vuln_py_lib.status_code == 404:
                                     if not args.s:
-                                        print(colored(f'[Python Package : {libs}] - ', 'red') + i.replace('https://raw.githubusercontent.com/' , 'https://github.com/').replace('/main/', '/blob/main/'))
+                                        print(colored(f'[Python Package : {libs}] - ', 'red') + i)
                                         if args.o:
-                                            msg_py = ((f'[Python Package : {libs}] -> ') +  i.replace('https://raw.githubusercontent.com/' , 'https://github.com/').replace('/main/', '/blob/main/'))
+                                            msg_py = ((f'[Python Package : {libs}] -> ') +  i)
                                             output_file.write(msg_py+'\n')   
                                     
                                 if vuln_py_lib.status_code == 200:
@@ -393,10 +393,10 @@ def pyt():
                 check_dependency = requests.get('https://www.npmjs.com/package/'+word)
                 if check_dependency.status_code == 404:
                     if not args.s:
-                        print(colored(f'[!] Vulnerable Repository [NPM Package : {word}] -> ', 'red') + j.replace('https://raw.githubusercontent.com/' , 'https://github.com/').replace('/main/', '/blob/main/'))
+                        print(colored(f'[!] Vulnerable Repository [NPM Package : {word}] -> ', 'red') + j)
                         
                     if args.o:
-                        msg_npm = ((f'[!] Vulnerable Repository [NPM Package : {word}] -> ') +  j.replace('https://raw.githubusercontent.com/' , 'https://github.com/').replace('/main/', '/blob/main/'))
+                        msg_npm = ((f'[!] Vulnerable Repository [NPM Package : {word}] -> ') +  j)
                         output_file.write(msg_npm + '\n')
                 else:
                     if args.v:
