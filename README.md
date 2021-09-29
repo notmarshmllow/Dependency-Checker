@@ -3,6 +3,8 @@ A tool to find Dependency Confusions inside a repository or an entire organizati
 
 Note: The tool is still in development phase. It generates some false positives while scanning Python packages and NPM Registry. 
 
+![alt image](https://github.com/notmarshmllow/Dependency-Checker/blob/main/image.jpg)
+
 # Installation:
 
 ```
@@ -41,6 +43,7 @@ python3 dependency_checker.py -org google -p 20
 ```
 python3 dependency_checker.py -org google -v -o output.txt
 ```
+All developments to the tool are welcomed and highly appreciated. Please feel free to open an issue for bug fixes and new features.
 
 Made by [@notmarshmllow](https://github.com/notmarshmllow)
 
