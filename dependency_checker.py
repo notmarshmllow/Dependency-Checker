@@ -241,7 +241,7 @@ donescan = []
 
 def pyt():
 
-    '''if len(py) > 0:
+    if len(py) > 0:
         if not args.s: 
             print(colored('\n-----------------------------------', 'green'))
             print(colored('> Checking for Python Dependencies', 'green'))
@@ -332,7 +332,7 @@ def pyt():
                                             msg_py = (str(libs) + ' - ' + ("Python Package Exist"))
                                             output_file.write(msg_py+'\n')
                                     
-                                donescan.append(libs)'''
+                                donescan.append(libs)
 #--------------------------------------------------------------------
 
     if len(json) > 0:
