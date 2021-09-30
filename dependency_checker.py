@@ -163,7 +163,7 @@ if args.org:
 
     def json_fch_org():
 
-        x = (args.p)
+        x = 1
 
         while x <= (args.p):
             #url_org_json = f'https://github.com/search?p={x}&q=org%3A{organization}+{query_json}&type=code'
@@ -187,7 +187,7 @@ if args.org:
 
     def go_fch_org():
 
-        x= (args.p)
+        x= 1
 
         while x <= (args.p):
             #url_org_go = f'https://github.com/search?p={x}&q=org%3A{organization}+{query_go}&type=code'
@@ -240,7 +240,8 @@ if args.u:
 donescan = []
 
 def pyt():
-    if len(py) > 0:
+
+    '''if len(py) > 0:
         if not args.s: 
             print(colored('\n-----------------------------------', 'green'))
             print(colored('> Checking for Python Dependencies', 'green'))
@@ -331,11 +332,7 @@ def pyt():
                                             msg_py = (str(libs) + ' - ' + ("Python Package Exist"))
                                             output_file.write(msg_py+'\n')
                                     
-                                donescan.append(libs)
-                                
-
-
-
+                                donescan.append(libs)'''
 #--------------------------------------------------------------------
 
     if len(json) > 0:
@@ -346,28 +343,31 @@ def pyt():
         for j in json:
             j = j.replace('https://github.com/', 'https://raw.githubusercontent.com/').replace('blob/', '')
 
-
-            repo_data = requests.get(j)
-            repo_data_json = (repo_data.json())
+            try:
+                repo_data = requests.get(j)
+                repo_data_json = (repo_data.json())
             
-            depedency_list = []
             
-            def requires(d):
-                for kx, v in d.items():
-                    if kx == 'requires':
-                        if isinstance(v, dict):
-                            for _kx, _v in v.items():
-                                depedency_list.append(_kx)
-                                
+                depedency_list = []
+                
+                def requires(d):
+                    for kx, v in d.items():
+                        if kx == 'requires':
+                            if isinstance(v, dict):
+                                for _kx, _v in v.items():
+                                    depedency_list.append(_kx)
+                                    
+                            else:
+                                pass
                         else:
-                            pass
-                    else:
-                        if isinstance(v, dict):
-                            requires(v)
-                    
+                            if isinstance(v, dict):
+                                requires(v)
+                        
 
 
-            requires(repo_data_json)
+                requires(repo_data_json)
+            except:
+                pass
 
 
 
@@ -546,4 +546,5 @@ try:
 except KeyboardInterrupt:
     print('\n\nExiting ... ')
     sys.exit(1)
+
 
